@@ -1,0 +1,15 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        string s1="15";
+        string s2="13";
+        int n1=Int32.Parse(s1);
+        int n2=Int32.Parse(s2);
+        int resint=n1+n2;
+        string res=s1+s2;
+        Console.Write(resint);
+    }
+}
