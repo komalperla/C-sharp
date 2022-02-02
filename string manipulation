@@ -1,0 +1,40 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int age=25;
+        string name="xyz";
+        string job="developer";
+        //string concatnation
+        Console.WriteLine("String concatenation ");
+        
+        Console.WriteLine("hello my name is "+name+",i am "+age+" years old.");
+        
+        
+        //string formatting
+        Console.WriteLine("String formatting ");
+        
+        Console.WriteLine("hello my name is {0},i am {1} years old.I am a{2}",name,age,job);
+        
+        //string interpoation
+        Console.WriteLine("String interpolation ");
+        
+        Console.WriteLine($"hello my name is {name},i am {age} years old.I am a {job}",name,age,job);
+        
+        
+        //verbatim string
+        Console.WriteLine("verbatim string ");
+        
+        Console.WriteLine(@"lorem 
+        
+        
+        
+        ipsum doloar sit amet");
+        
+        
+        
+        Console.Read();
+    }
+}
