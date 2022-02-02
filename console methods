@@ -1,0 +1,16 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.Write("enter a string ans press enter:");
+        String readInput=Console.ReadLine();
+        Console.WriteLine("you have entered {0}",readInput);
+        Console.Write("enter a key and press enter:");
+        int asciiValue=Console.Read();
+        Console.WriteLine("ASCII value is {0}:",asciiValue);
+        Console.ReadKey();
+        
+    }
+}
