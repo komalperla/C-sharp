@@ -1,0 +1,18 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        string firstname="Abc";
+        string lastname="Xyz";
+        string fullname=string.Concat("",firstname,lastname,"");
+        Console.WriteLine(firstname.Substring(2));
+        Console.WriteLine(firstname.ToLower());
+        Console.WriteLine(firstname.ToUpper());
+        Console.WriteLine(firstname.Trim());
+        Console.WriteLine(firstname.IndexOf('b'));
+        Console.WriteLine(string.IsNullOrWhiteSpace(firstname));
+        Console.Read();
+    }
+}
