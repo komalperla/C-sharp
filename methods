@@ -1,0 +1,23 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        writesomething();
+        writesomethingspecific("i am the argument and am called from a method");
+        Console.Read();
+        
+    }
+    public static void writesomething()
+    {
+        Console.WriteLine(
+            "i am called from a method");
+            
+    }
+    public static void writesomethingspecific(string mytext)
+    {
+        Console.WriteLine(mytext);
+        
+    }
+}
