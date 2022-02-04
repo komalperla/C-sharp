@@ -1,0 +1,21 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        
+        Console.WriteLine(add(30,25));
+        Console.WriteLine(mul(30,25));
+        Console.Read();
+        
+    }
+    public static int add(int n1,int n2)
+    {
+        return n1+n2;
+    }
+    public static int mul(int n1,int n2)
+    {
+        return n1*n2;
+    }
+}
