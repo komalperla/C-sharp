@@ -1,0 +1,37 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        box b=new box();
+        //b.length=3;
+        b.setlength(3);
+        b.height=5;
+        b.width=8;
+        Console.WriteLine("box length is "+b.getlength());
+        b.displayinfo();
+        //Console.WriteLine ("Hello Mono World");
+    }
+    public class box
+    {
+        private int length=3;
+        public int height;
+        public int width;
+        public int volume;
+        
+        public void setlength(int length)
+        {
+            this.length=length;
+        }
+        public int getlength()
+        {
+            return this.length;
+        }
+        public void displayinfo()
+        {
+            Console.WriteLine("length is {0} and height is {1} and width is {2} so the volume is {3} ",length,height,width,volume=length*height*width);
+            
+        }
+    }
+}
