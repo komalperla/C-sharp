@@ -1,0 +1,43 @@
+using System;
+public class program
+{
+    
+    public static void Main(string[] args)
+    {
+        string input="0";
+        int count=0;
+        int total=0;
+        int currentnumber=0;
+        while(input !="-1")
+        {
+            Console.WriteLine("last number was {0}",currentnumber);
+            Console.WriteLine("please enter the next score");
+            Console.WriteLine("current amount of entries {0}",count);
+            Console.WriteLine("please enter -1 once you are reddy to calculate the average");
+            input=Console.ReadLine();
+            if(input.Equals("-1"))
+            {
+                Console.WriteLine("------------------");
+                double average=(double)total/(double)count;
+                Console.WriteLine("the average score of your students is {0}",average);
+            }
+            if(int.TryParse(input,out currentnumber)&&currentnumber >0 && currentnumber <21)
+            {
+                total+=currentnumber;
+            }
+            else
+            {
+                if(!(input.Equals("-1")))
+                {
+                    Console.WriteLine("please enter a value between a to 20 !");
+                }
+                continue;
+            }
+            count++;
+            
+        }
+       Console.ReadKey();
+    }
+    
+    
+}
