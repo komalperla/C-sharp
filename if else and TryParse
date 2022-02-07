@@ -1,0 +1,18 @@
+using System;
+
+public class program
+{
+    public static void Main(string[] args)
+    {
+        string stringAsInteger="128";
+        int success;
+        if(int.TryParse(stringAsInteger, out success))
+        {
+            Console.WriteLine("true");
+        }
+        else{
+            Console.WriteLine("false");
+        }
+           Console.ReadKey();
+    }
+    
