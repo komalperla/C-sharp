@@ -1,0 +1,21 @@
+using System;
+
+
+public class program
+{
+    
+    public static void Main(string[] args)
+    {
+        
+        int counter=0;
+        do
+        {
+            Console.WriteLine(counter);
+            counter++;
+            
+        }while(counter<5);
+           Console.ReadKey();
+    }
+    
+    
+}
