@@ -1,0 +1,31 @@
+using System;
+
+public class program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("please enter a number:");
+        string  userinput=Console.ReadLine();
+        try{
+            int userinputint=int.Parse(userinput);
+        }
+        catch(FormatException)
+        {
+            //throw;
+            Console.WriteLine("format exception, please enter the correct type next time");
+        }
+        catch(OverflowException)
+        {
+            Console.WriteLine("overflow exception");
+        }
+        
+        finally
+        {
+            Console.WriteLine("this is called anyways");
+        }
+        
+        
+        Console.ReadKey();
+    }
+    
+}
