@@ -1,0 +1,35 @@
+using System;
+
+
+public class program
+{
+    
+    public static void Main(string[] args)
+    {
+        
+        int inputTemperature= 0;
+        string temperaturemsg=string.Empty;
+        string inputvalue=string.Empty;
+        
+        Console.WriteLine("enter the current temperature:");
+        inputvalue=Console.ReadLine();
+        
+        bool validInteger=int.TryParse(inputvalue,out inputTemperature);
+        
+        if(validInteger)
+        {
+            //condition ? true :false
+            temperaturemsg=inputTemperature <=15 ? "it is too cold here ": (inputTemperature >=16 && inputTemperature <=28)? "it is cold here ": inputTemperature >28 ? "it is hot here ": "";
+            Console.WriteLine(temperaturemsg);
+        }
+        else
+        {
+            Console.WriteLine("not a valid temperature");
+        }
+        
+        
+           Console.ReadKey();
+    }
+    
+    
+}
