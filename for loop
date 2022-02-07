@@ -1,0 +1,18 @@
+using System;
+
+
+public class program
+{
+    
+    public static void Main(string[] args)
+    {
+        
+        for(int counter=0;counter<50; counter+=5)
+        {
+            Console.WriteLine(counter);
+        }
+           Console.ReadKey();
+    }
+    
+    
+}
