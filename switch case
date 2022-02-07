@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+public class program
+{
+    
+    public static void Main(string[] args)
+    {
+        int age=25;
+        switch(age)
+        {
+            case 15:
+                Console.WriteLine("Too young to party in the club!");
+                break;
+            case 25:
+                Console.WriteLine("good to go!");
+                break;
+            default:
+                Console.WriteLine("how old are you than?");
+                break;
+                
+            
+        }
+        
+           Console.ReadKey();
+    }
+    
+    
+}
