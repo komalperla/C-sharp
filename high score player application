@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+public class program
+{
+    static int highscore=300;
+     static string highscoreplayer="denis";   
+    
+    public static void Main(string[] args)
+    {
+        
+        checkhighscore(250,"maria");
+        checkhighscore(315,"michael");
+        checkhighscore(350,"denis");
+           Console.ReadKey();
+    }
+    public static void checkhighscore(int score,string playername)
+    {
+        if(score>highscore)
+        {
+            highscore=score;
+            highscoreplayer=playername;
+            Console.WriteLine("new highscore is"+score);
+            Console.WriteLine("it is noe held by "+playername);
+            
+        }
+        else
+        {
+            Console.WriteLine("The old highscore could not broken.it is still "+highscore+" and held by "+highscoreplayer);
+            
+        }
+    }
+    
+    
+}
