@@ -1,0 +1,27 @@
+using System;
+
+public class program
+{
+    public static void Main(string[] args)
+    {
+        bool isAdmin=false;
+        bool isRegistered=true;
+        string username="";
+        Console.WriteLine("please enter your username");
+        username=Console.ReadLine();
+        if(isRegistered)
+        {
+            Console.WriteLine("Hi there,registered user");
+            if(username!="")
+            {
+                Console.WriteLine("Hi there,"+username);
+                if(username.Equals("admin"))
+                {
+                    Console.WriteLine("Hi there,Admin");
+                }
+            }
+        }
+           Console.ReadKey();
+    }
+    
+}
