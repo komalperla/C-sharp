@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+public class program
+{
+    static string username;
+    static string password;
+    public static void Main(string[] args)
+    {
+        register();
+        login();
+           Console.ReadKey();
+    }
+    public static void register()
+    {
+        Console.WriteLine("please enter your username");
+        username=Console.ReadLine();
+        Console.WriteLine("please enter your password");
+        password=Console.ReadLine();
+        Console.WriteLine("registration completed");
+        Console.WriteLine("-------------------------");
+        
+        
+        
+    }
+    public static void login()
+    {
+        Console.WriteLine("please enter your username");
+        if(username==Console.ReadLine())
+        {
+            Console.WriteLine("please enter your password");
+            if(password==Console.ReadLine())
+            {
+                Console.WriteLine("login successfull");
+            }
+            else
+            {
+                Console.WriteLine("login failed.restart program");
+            }
+            
+        }
+        else
+        {
+            Console.WriteLine("login failed,wrong username,restart program");
+        }
+    }
+    
+    
+}
