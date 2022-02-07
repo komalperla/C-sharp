@@ -1,0 +1,18 @@
+using System;
+
+
+public class program
+{
+    
+    public static void Main(string[] args)
+    {
+        
+        int temperature= -5;
+        string statematter;
+        statematter=temperature < 0 ? "solid": "liquid";
+        Console.WriteLine("state of matter is {0} ",statematter);
+           Console.ReadKey();
+    }
+    
+    
+}
