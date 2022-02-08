@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TicTacToeExercise
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[][] jaggedarray=new int[3][];
+            jaggedarray[0]=new int[5];
+            jaggedarray[1]=new int[3];
+            jaggedarray[2]=new int[2];
+           
+           jaggedarray[0]=new int[]{1,2,3,4,5};
+           jaggedarray[1]=new int[]{10,23,45};
+           jaggedarray[2]=new int[]{12,34};
+           
+           int[][] jaggedarray2=new int[][]
+           {
+               new int[]{1,2,3,4,5},
+               new int[]{10,23,45}
+               
+           };
+           Console.WriteLine("the value in the middle of the first entry is {0}",jaggedarray2[0][2]);
+           for(int i=0;i<jaggedarray2.Length;i++)
+           {
+               Console.WriteLine("element {0}",i);
+               for(int j=0;j<jaggedarray2[i].Length;j++)
+               {
+                   Console.WriteLine("{0}",jaggedarray2[i][j]);
+               }
+           }
+           Console.ReadKey();
+        }
+    }
+}
