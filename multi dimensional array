@@ -1,0 +1,52 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        //declare 2D array
+       string[,] matrix;
+       //3D array
+       string[,,] matrix1;
+       
+       //two dimentional array
+       int[,] array2D=new int[,]
+       {
+           {1,2,3},//row 0
+           {4,5,6},//row 1
+           {7,8,9}//row 2
+           
+       };
+       Console.WriteLine("central value is {0} ",array2D[2,0]);
+       
+       //three dimentional array
+       string[,,] array3D=new string[,,]
+       {
+           {
+               {"000","001"},
+               {"010","011"}
+               
+           },
+           {
+               {"100","101"},
+               {"110","111"}
+           }
+           
+       };
+       Console.WriteLine("central value is {0} ",array3D[1,1,0]);
+       
+       string[,] array2Dstring=new string[3,2]
+       {
+           {"one","two"},
+           {"three","four"},
+           {"five","six"}
+           
+       };
+       array2Dstring[1,1]="chiken";
+       Console.WriteLine("central value is {0} ",array2Dstring[1,1]);
+       
+       int dimensions=array2Dstring.Rank;
+       Console.WriteLine("the value is {0} ",dimensions);
+       Console.ReadKey();
+    }
+}
