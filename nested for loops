@@ -1,0 +1,29 @@
+using System;
+
+public class HelloWorld
+{
+    static int[,] array2D=new int[,]
+       {
+           {1,2,3},//row 0
+           {4,5,6},//row 1
+           {7,8,9}//row 2
+           
+       };
+    public static void Main(string[] args)
+    {
+       foreach(int item in array2D)
+       {
+           Console.Write(item +" ");
+           
+       }
+       Console.WriteLine("this is our 2D array prininting using nested for loop  ");
+       for(int i=0;i<array2D.GetLength(0);i++)
+       {
+            for(int j=0;j<array2D.GetLength(1);j++)
+            {
+                Console.Write(array2D[i,j] + " ");
+            }
+       }
+       Console.ReadKey();
+    }
+}
