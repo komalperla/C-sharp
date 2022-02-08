@@ -1,0 +1,27 @@
+using System;
+
+public class HelloWorld
+{
+    
+    public static void Main(string[] args)
+    {
+        int [] grades=new int[5];
+        grades[0]=20;
+        grades[1]=15;
+        grades[2]=10;
+        grades[3]=8;
+        grades[4]=5;
+        
+        Console.WriteLine("grades at index 0 :{0}",grades[0]);
+        
+        string input=Console.ReadLine();
+        grades[0]=int.Parse(input);
+        Console.WriteLine("grades at index 0 :{0}",grades[0]);
+        
+        int[] gradeofmathstudentsA={20,30,40,5,25};
+        
+        int[] gradeofmathstudentsB=new int[] { 25,56,48,25,36};
+        Console.WriteLine("length of grade of maths students A :{0} ",gradeofmathstudentsA.Length);
+        Console.ReadKey();
+    }
+}
