@@ -1,0 +1,55 @@
+using System;
+
+public class HelloWorld
+{
+    class members
+    {
+        private string membername;
+        private string jobtitle;
+        private int salary=20000;
+        public int age;
+        public string jobtitle{
+            get{
+                return jobtitle;
+            }
+            set{
+                jobtitle=value;
+            }
+        }
+        public void introducing(bool isFriend){
+            if(isFriend)
+            {
+                sharingprivateinfo();
+                
+            }
+            else
+            {
+                Console.WriteLine("hi, my name is {0},and my job title is {1},i'm {2} years old",membername,jobtitle,age);
+            }
+        }
+        private void sharingprivateinfo()
+        {
+            Console.WriteLine("my salary is {0} ",salary);
+        }
+        public members()
+        {
+            age=30;
+            membername="lucy";
+            salary=60000;
+            jobtitle="developer";
+            Console.WriteLine("object created");
+        }
+        ~members()
+        {
+            Console.WriteLine("deconstruction of members object");
+            Debug.Write("deconstruction of members object");
+        }
+        
+    }
+    public static void Main(string[] args)
+    {
+        members m=new members();
+        m.introducing(true);
+        Console.ReadKey();
+    }
+}
