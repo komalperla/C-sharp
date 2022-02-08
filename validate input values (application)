@@ -1,0 +1,63 @@
+using System;
+
+public class HelloWorld
+{
+    
+    public static void Main(string[] args)
+    {
+        bool valid=false;
+        string inputvaluetype;
+        
+        Console.WriteLine("enter a value:");
+        string inputvalue=Console.ReadLine();
+        
+        Console.WriteLine("select the data type to validate the input you have entered");
+        Console.WriteLine("press 1 for string");
+        Console.WriteLine("press 2 for integer");
+        Console.WriteLine("press 3 for boolean");
+         
+         Console.WriteLine("enter:");
+         int inputtype=Convert.ToInt32(Console.ReadLine());
+        switch(inputtype)
+        {
+            case 1:
+                valid=IsAllAlpabetic(inputvalue);
+                inputvaluetype="string";
+                break;
+            case 2:
+                int retvalue=0;
+                valid=int.TryParse(inputvalue,out retvalue);
+                inputvaluetype="integer";
+                break;
+            case 3:
+                bool retflag=false;
+                valid=bool.TryParse(inputvalue,out retflag);
+                inputvaluetype="boolean";
+                break;
+            default:
+                inputvaluetype="unknown";
+                Console.WriteLine("not able to detect the input type,something went wrong");
+                break;
+        }
+        Console.WriteLine("you have entered a value:{0}",inputvalue);
+        if(valid)
+        {
+            Console.WriteLine("it is valid:{0}",inputvaluetype);
+            
+        }
+        else
+        {
+            Console.WriteLine("it is invalid:{0}",inputvaluetype);
+        }
+        Console.ReadKey();
+    }
+    static bool IsAllAlpabetic(string value)
+    {
+        foreach(char c in value)
+        {
+            if(!char.IsLetter(c))
+                return false;
+        }
+        return true;
+    }
+}
