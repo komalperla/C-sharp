@@ -1,0 +1,35 @@
+using System;
+
+namespace program
+{
+    interface IUser
+    {
+       void GetDetails(string x);
+    }
+    class User: IUser
+    {
+        public void GetDetails(string a)
+        {
+           Console.WriteLine("Name: {0}", a);
+        }
+    }
+    class User1: IUser
+    {
+       public void GetDetails(string a)
+       {
+          Console.WriteLine("Location: {0}", a);
+       }
+    }
+    class Program
+    {
+       static void Main(string[] args)
+       {
+          IUser u = new User();
+          u.GetDetails("Suresh Dasari");
+          IUser u1 = new User1();
+          u1.GetDetails("Hyderabad");
+          Console.WriteLine("\nPress Enter Key to Exit..");
+          Console.ReadLine();
+       }
+    }
+}
