@@ -1,0 +1,37 @@
+using System;
+
+namespace Tutlane
+{
+    class Program
+    {
+       enum Week
+       {
+          Sunday,
+          Monday,
+          Tuesday,
+          Wednesday,
+          Thursday,
+          Friday,
+          Saturday
+       }
+       static void Main(string[] args)
+       {
+           Console.WriteLine("Week Enumeration Values");
+           foreach (string w in Enum.GetNames(typeof(Week)))
+           {
+              Console.WriteLine(w);
+           }
+           Console.WriteLine("--------------------");
+           Console.WriteLine("Week Enumeration Values");
+           foreach (int w in Enum.GetValues(typeof(Week)))
+           {
+              Console.WriteLine(w);
+           }
+           Console.WriteLine("--------------------");
+          
+           
+           Console.WriteLine("\nPress Any Key to Exit..");
+           Console.ReadLine();
+       }
+    }
+}
