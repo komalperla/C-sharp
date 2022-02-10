@@ -1,0 +1,35 @@
+using System;
+using System.Collections;
+
+namespace Tutlane
+{
+    class Program
+    {
+       static void Main(string[] args)
+       {
+           Queue qu=new Queue();
+           qu.Enqueue("queue");
+           qu.Enqueue("have");
+           qu.Enqueue(7);
+           qu.Enqueue("methods");
+           qu.Enqueue("and");
+           qu.Enqueue(2);
+           qu.Enqueue("property");
+           Console.WriteLine("*********queue Elements********");
+          // Accessing elements as KeyValuePair objects.
+          foreach (var item in qu)
+          {
+             Console.WriteLine(item);
+          }
+          qu.Dequeue();
+          Console.WriteLine("*********queue Elements********");
+          // Accessing elements as KeyValuePair objects.
+          foreach (var item in qu)
+          {
+             Console.WriteLine(item);
+          }
+          Console.WriteLine("top element:"+qu.Peek());
+          
+       }
+    }
+}
