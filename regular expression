@@ -1,0 +1,21 @@
+using System;
+using System.Text.RegularExpressions;
+
+namespace Tutlane
+{
+    class Program
+    {
+       static void Main(string[] args)
+       {
+           string email="support@gmail.com";
+           var result=Regex.IsMatch(email,@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
+           Console.Write("Is valid:{0}",result);
+           
+           string str="Hi,Welcome@to-C#sharp.com";
+           string result1=Regex.Replace(str,"[^a-zA-Z0-9_]+", " ");
+           Console.WriteLine("{0}",result1);
+           
+           Console.ReadLine();
+       }
+    }
+}
