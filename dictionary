@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+
+namespace Tutlane
+{
+    class Program
+    {
+       static void Main(string[] args)
+       {
+           Dictionary<int,string> dct=new Dictionary<int,string>();
+           dct.Add(1,"dictionary");
+           dct.Add(2,"have");
+           dct.Add(3,"six");
+           dct.Add(4,"methods");
+           dct.Add(5,"and");
+           dct.Add(6,"four");
+           dct.Add(7,"property");
+           Console.WriteLine("*********Dictionary1 Elements********");
+          // Accessing elements as KeyValuePair objects.
+          foreach (KeyValuePair<int, string> item in dct)
+          {
+             Console.WriteLine("Key = {0}, Value = {1}", item.Key, item.Value);
+          }
+          Console.WriteLine("contains key:"+dct.ContainsKey(5));
+          Console.WriteLine("contains value:"+dct.ContainsValue("and"));
+          Console.WriteLine("remove:"+dct.Remove(1));
+          Console.WriteLine("*********Dictionary1 Elements********");
+          // Accessing elements as KeyValuePair objects.
+          foreach (KeyValuePair<int, string> item in dct)
+          {
+             Console.WriteLine("Key = {0}, Value = {1}", item.Key, item.Value);
+          }
+       }
+    }
+}
