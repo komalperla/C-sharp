@@ -1,0 +1,35 @@
+using System;
+using System.Collections;
+
+namespace Tutlane
+{
+    class Program
+    {
+       static void Main(string[] args)
+       {
+           Stack stk=new Stack();
+           stk.Push("stack");
+           stk.Push("have");
+           stk.Push(6);
+           stk.Push("methods");
+           stk.Push("and");
+           stk.Push(4);
+           stk.Push("property");
+           Console.WriteLine("*********Stack Elements********");
+          // Accessing elements as KeyValuePair objects.
+          foreach (var item in stk)
+          {
+             Console.WriteLine(item);
+          }
+          stk.Pop();
+          Console.WriteLine("*********Stack Elements********");
+          // Accessing elements as KeyValuePair objects.
+          foreach (var item in stk)
+          {
+             Console.WriteLine(item);
+          }
+          Console.WriteLine("top element:"+stk.Peek());
+          
+       }
+    }
+}
