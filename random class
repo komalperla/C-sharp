@@ -1,0 +1,45 @@
+using System;
+using System.Collections;
+
+namespace Tutlane
+{
+    class Program
+    {
+       static void Main(string[] args)
+       {
+           Random rnd=new Random();
+           Console.WriteLine("***Generate Multiple Random Integers***");
+           for(int i=0;i<5;i++)
+           {
+               
+               Console.WriteLine(rnd.Next());
+           }
+           Console.WriteLine("***Generate Random Numbers in Range***");
+           for(int i=0;i<5;i++)
+           {
+               
+               Console.WriteLine(rnd.Next(10));
+           }
+           Console.WriteLine("***Generate Random Number in Min to Max Range***");
+           for(int i=0;i<5;i++)
+           {
+               
+               Console.WriteLine(rnd.Next(10,20));
+           }
+           Console.WriteLine("***Generate Random Floating Point Number***");
+           for(int i=0;i<5;i++)
+           {
+               
+               Console.WriteLine(rnd.NextDouble());
+           }
+           Console.WriteLine("***Generate Random Bytes***");
+           byte[] rndbyte=new byte[4];
+           rnd.NextBytes(rndbyte);
+           foreach(byte val in rndbyte)
+           {
+               
+               Console.WriteLine(val);
+           }
+       }
+    }
+}
