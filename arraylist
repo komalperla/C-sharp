@@ -1,0 +1,92 @@
+using System;
+using System.Collections;
+
+namespace Tutlane
+{
+    class Program
+    {
+       static void Main(string[] args)
+       {
+           ArrayList arr1=new ArrayList();
+           arr1.Add("hello this is array list");
+           arr1.Add(16);
+           arr1.Add("methods");
+           arr1.Add(6);
+           arr1.Add("properties");
+           Console.WriteLine("1st property is ArrayList Count: " + arr1.Count);
+           Console.WriteLine(" 2nd is ArrayList Capacity: " + arr1.Capacity);
+           Console.WriteLine(" 3rd is ArrayList IsFixedSize: " + arr1.IsFixedSize);
+          // Console.WriteLine(" 4th is ArrayList iteam: " + arr1.Item[1]);
+           Console.WriteLine(" 5th is ArrayList IsReadOnly: " + arr1.IsReadOnly);
+           Console.WriteLine(" 6th is ArrayList IsSynchronized: " + arr1.IsSynchronized);
+           Console.WriteLine("*********ArrayList Elements********");
+           foreach (var item in arr1)
+           {
+               Console.WriteLine(item);
+           }
+           ArrayList arr2=new ArrayList(){"welcome to c sharp",100,5.5};
+           arr1.AddRange(arr2);
+           Console.WriteLine("*********ArrayList Elements********");
+           foreach (var item in arr1)
+           {
+               Console.WriteLine(item);
+           }
+           arr2.Clear();
+           Console.WriteLine("*********ArrayList Elements********");
+           foreach (var item in arr1)
+           {
+               Console.WriteLine(item);
+           }
+           ArrayList arr3=new ArrayList();
+           arr3.Clone();
+           Console.WriteLine("*********ArrayList Elements********");
+           foreach (var item in arr1)
+           {
+               Console.WriteLine(item);
+           }
+           Console.WriteLine(arr3);
+           Console.WriteLine(" Contains :"+arr1.Contains(100));
+           Console.WriteLine(" GetRange :"+arr1.GetRange(0,5));
+           Console.WriteLine(" index of :",arr1.IndexOf(100));
+           arr1.Insert(0, "Hi");
+           Console.WriteLine("*********ArrayList Elements********");
+           foreach (var item in arr1)
+           {
+               Console.WriteLine(item);
+           }
+           ArrayList arr4=new ArrayList(){1,2,3,4};
+           arr1.InsertRange(6,arr4);
+           Console.WriteLine("*********ArrayList Elements********");
+           foreach (var item in arr1)
+           {
+               Console.WriteLine(item);
+           }
+           arr1.Remove(2);
+           Console.WriteLine("*********ArrayList Elements********");
+           foreach (var item in arr1)
+           {
+               Console.WriteLine(item);
+           }
+           arr1.RemoveAt(3);
+           Console.WriteLine("*********ArrayList Elements********");
+           foreach (var item in arr1)
+           {
+               Console.WriteLine(item);
+           }
+           arr1.RemoveRange(2,2);
+           Console.WriteLine("*********ArrayList Elements********");
+           foreach (var item in arr1)
+           {
+               Console.WriteLine(item);
+           }
+           arr1.Reverse();
+           Console.WriteLine("*********ArrayList Elements********");
+           foreach (var item in arr1)
+           {
+               Console.WriteLine(item);
+           }
+           
+           Console.ReadLine();
+       }
+    }
+}
