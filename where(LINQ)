@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Linqtutorials
+{
+   class Program
+   {
+     static void Main(string[] args)
+     {
+       string[] countries = { "India", "Australia", "USA", "Argentina", "Peru", "China" };
+       IEnumerable<string> result = countries.Where(x => x.StartsWith("A"));
+       foreach (var country in result)
+       {
+         Console.WriteLine(country);
+       }
+       Console.ReadLine();
+     }
+   }
+}
