@@ -1,0 +1,33 @@
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Feb11
+{
+    class Program4
+    {
+        //Lambda    delegate(pointers)
+        public static void Main(string[] args)
+        {
+            //varable=>expression
+            //Func
+            //Action
+            
+            Func<int, int> Square =
+                x => x * x;
+
+            Console.WriteLine(Square(6));
+
+            Action<string> Greet = name =>  //action
+             {
+                 //opertion
+                 string salue = $"Welcome, {name}";
+                 Console.WriteLine(salue);
+             };
+            Greet("Ujwal");
+        }
+    }
+}
