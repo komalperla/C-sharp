@@ -1,0 +1,30 @@
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace lambda
+{
+    
+    class Program3
+    {
+        public static void Main(string[] args)
+        {
+            int[] x={1,5,2,4,9,6,3,7,8,11,12,13,14,15,16};
+            Console.WriteLine("LINQ Functions...");
+            int min=x.Min();
+            Console.WriteLine("minimum number:"+min);
+            int max=x.Max();
+            Console.WriteLine("\nmaximum number:"+max);
+            int sum=x.Sum();
+            Console.WriteLine("sum of numbers:"+sum);
+            int count=x.Count();
+            Console.WriteLine("count of numbers:"+count);
+            double average=x.Average();
+            Console.WriteLine("Average:"+average);
+            
+        }
+    }
+}
