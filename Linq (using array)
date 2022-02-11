@@ -1,0 +1,45 @@
+
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace linq
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Linq in Action!");
+            int[] iArr = { 23, 44, 32, 12, 55, 65, 43, 23, 66, 78, 90, 87 };
+
+            //Langauge Integrated Query the query like syntax to work on array, collection, database, xml
+            //sorting the array using LINQ
+            var res = from x in iArr    // data
+                      orderby x  //    query
+                      select x;         //execution of the query 
+            Console.WriteLine("Sorted elements");
+            foreach (var item in res)
+            {
+                Console.WriteLine(item);
+            }
+            //filter out the elements above 50
+
+            IEnumerable<int> resGt50 = from x in iArr
+                            where x > 50
+                            orderby x
+                            select x;
+            Console.WriteLine("Above 50 elements");
+            foreach (int item in resGt50)
+            {
+                Console.WriteLine(item);
+            }
+            Console.Write("The biggest element is {0}\nThe smallest is {1}" +
+                "\nThe Average is {2}\nTotal sum is {3}",
+                iArr.Max(),
+                iArr.Min(),
+                iArr.Average(),
+                iArr.Sum());
+           
+        }
+    }
+}
