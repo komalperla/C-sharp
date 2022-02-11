@@ -1,0 +1,40 @@
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Feb11
+{
+    //60 to 80
+    class Program2
+    {
+       public  static void Main(string[] args)
+        {
+            List<int> lst = new List<int>()
+            {
+                33,46,77,88,34,23,72,49,63,78,56,12
+            };
+            var res = from x in lst
+                      where x>=60 && x<=80
+                      orderby x
+                      select x;
+            foreach (int item in res)
+            {
+                Console.WriteLine(item);
+            }
+            List<string> lstNames = new List<string>()
+            {
+                "Arun","Ajay","Hema","Kiran","Peter","Abdul","Babu"
+            };
+            IEnumerable<string> strName = from y in lstNames
+                                          where y.Length<5
+                                          select y;
+            foreach (string item in strName)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
