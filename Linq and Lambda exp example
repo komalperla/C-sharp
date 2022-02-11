@@ -1,0 +1,54 @@
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Feb11
+{
+    class Department
+    {
+        int _id;
+        string _name;
+        int _count;
+
+        public int Id { get => _id; set => _id = value; }
+        public string Name { get => _name; set => _name = value; }
+        public int Count { get=>_count; set =>_count=value ; }
+        public override string ToString()
+        {
+            return $"{_id}\t{_name}\t\t{_count}";
+        }
+    }
+    class Program3
+    {
+        public static void Main(string[] args)
+        {
+            List<Department> lst = new List<Department>()
+            {
+                new Department{Id=902,Name="Sales",Count=30},
+                new Department{Id=892,Name="Production",Count=320},
+                new Department{Id=823,Name="Administraion",Count=4},
+                new Department{Id=100,Name="Accounts",Count=4}
+            };
+            IEnumerable<Department> lstSales = from sale in lst
+                                               where sale.Name == "Sales"
+                                               select sale;
+            Console.WriteLine("Find Sales department");
+            foreach (var item in lstSales)
+            {
+                Console.WriteLine(item);
+            }
+
+            IEnumerable<Department> lstCnt = from x in lst
+                                             where x.Count > 50
+                                             select x;
+            Console.WriteLine("Department with Count more than 50");
+            foreach (var item in lstCnt)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
