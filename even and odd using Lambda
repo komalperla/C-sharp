@@ -1,0 +1,30 @@
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace lambda
+{
+    
+    class Program3
+    {
+        public static void Main(string[] args)
+        {
+            int[] x={1,5,2,4,9,6,3,7,8,11,12,13,14,15,16};
+            Console.WriteLine("even numbers:");
+            IEnumerable<int> evennumber = x.Where(nos => nos % 2 == 0);
+              foreach (var item in evennumber)
+              {
+                 Console.WriteLine(item);
+              }
+              Console.WriteLine("odd numbers:");
+            IEnumerable<int> oddnumber = x.Where(nos => nos % 2 == 1);
+              foreach (var item in oddnumber)
+              {
+                 Console.WriteLine(item);
+              }
+        }
+    }
+}
