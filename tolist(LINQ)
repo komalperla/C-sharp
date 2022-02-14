@@ -1,0 +1,21 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace LINQExamples
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+       string[] countries = { "UK", "USA", "Russia", "China", "Australia", "Argentina" };
+              List<string> result = countries.ToList();
+       foreach (string s in result)
+       {
+         Console.WriteLine(s);
+       }
+       Console.ReadLine();
+    }
+  }
+}
