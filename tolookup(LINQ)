@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Linqtutorials
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      List<Employee> objEmployee = new List<Employee>()
+      {
+        new Employee(){ Name="Ashish Sharma", Department="Marketing", Country="India"},
+        new Employee(){ Name="John Smith", Department="IT", Country="Australia"},
+        new Employee(){ Name="Kim Jong", Department="Sales", Country="China"},
+        new Employee(){ Name="Marcia Adams", Department="HR", Country="USA"},
+        new Employee(){ Name="John Doe", Department="Operations", Country="Canada"}
+      };
+      var emp = objEmployee.ToLookup(x => x.Department);
+      Console.WriteLine("Grouping Employees by Department");
+      Console.WriteLine("---------------------------------");
+      foreach (var KeyValurPair in emp)
+      {
+        Console.WriteLine(KeyValurPair.Key);
+        // Lookup employees by Department
+        foreach (var item in emp[KeyValurPair.Key])
+        {
+          Console.WriteLine("\t" + item.Name + "\t" + item.Department + "\t" + item.Country);
+        }
+      }
+      Console.ReadLine();
+    }
+  }
+  class Employee
+  {
+    public string Name { get; set; }
+    public string Department { get; set; }
+    public string Country { get; set; }
+  }
+}
