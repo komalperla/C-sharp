@@ -1,0 +1,79 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace LinqWithXML
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //We simply apply our Student-Structure to XML. 
+            string employeeXML =
+                        @"<Employees>
+                <employee>
+                <empid>1</empid>
+                <empname>Suresh Dasari</empname>
+                <salary>10000</salary>
+                <gender>Male</gender>
+                </employee>
+                <employee>
+                <empid>2</empid>
+                <empname>Rohini Alavala</empname>
+                <salary>20000</salary>
+                <gender>Female</gender>
+                </employee>
+                <employee>
+                <empid>3</empid>
+                <empname>Praveen Alavala</empname>
+                <salary>30000</salary>
+                <gender>Male</gender>
+                </employee>
+                <employee>
+                <empid>4</empid>
+                <empname>Sateesh Chandra</empname>
+                <salary>50000</salary>
+                <gender>Male</gender>
+                </employee>
+                <employee>
+                <empid>5</empid>
+                <empname>Sushmitha</empname>
+                <salary>60000</salary>
+                <gender>Female</gender>
+                </employee>
+                </Employees>";
+
+            XDocument employeeXdoc = new XDocument();
+            employeeXdoc = XDocument.Parse(employeeXML);
+
+            var emp = from e in employeeXdoc.Descendants("employee")
+                           select new
+                           {
+                               empid = e.Element("empid").Value,
+                               empname = e.Element("empname").Value,
+                               salary = e.Element("salary").Value,
+                               gender = e.Element("gender").Value
+                           };
+
+            foreach (var e in emp)
+            {
+                Console.WriteLine("employee {0} with name {1} and salary {2} and gender {3} ", e.empid, e.empname, e.salary, e.gender);
+            }
+
+            var sortedemployees = from e in emp
+                                 orderby e.empid
+                                 select e;
+
+            foreach (var e in sortedemployees)
+            {
+                Console.WriteLine("employee with id {0} name {1} and salary {2}", e.empid, e.empname, e.salary);
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
